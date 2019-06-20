@@ -6,7 +6,7 @@
 /*   By: pntsunts <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/18 10:17:32 by pntsunts          #+#    #+#             */
-/*   Updated: 2019/06/19 14:46:58 by pntsunts         ###   ########.fr       */
+/*   Updated: 2019/06/20 15:09:40 by pntsunts         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,6 +98,32 @@ void join()
 	s = ft_strjoin(str, str2);
 	printf("%s\n", s);
 }
+void trim()
+{
+	char str[] = "	         ***PETER ** NTSUNTSHA			";
+	char *res;
+	res = ft_strtrim(str);
+	printf("%s", res);
+}
+void equal()
+{
+	char s1[] = "peter";
+	char s2[] = "peter";
+	printf("%d",ft_strequ(s1, s2));
+}
+void new()
+{
+	char *s; 
+	s = ft_strnew(5);
+	int i = 0;
+	while (i < 5)
+	{
+		s[i] = 'a';
+		i++;
+	}
+	printf("%s",s);
+	free(s);
+}
 int main()
 {/*
 	nbr();
@@ -108,9 +134,10 @@ int main()
 	split();
 	ite();
 	iteri();
-	stmap();*/
+	stmap();
 	join();
+	trim();
+	equal()*/
+	new();
 	return (0);
 }
-
-
