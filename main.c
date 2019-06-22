@@ -6,7 +6,7 @@
 /*   By: pntsunts <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/18 10:17:32 by pntsunts          #+#    #+#             */
-/*   Updated: 2019/06/20 15:09:40 by pntsunts         ###   ########.fr       */
+/*   Updated: 2019/06/22 05:58:31 by pntsunts         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,6 +124,42 @@ void new()
 	printf("%s",s);
 	free(s);
 }
+void cmp()
+{
+	char st1[] = "PETER";
+	char st2[] = "PETER";	
+	if (ft_memcmp(st1, st2, 5) == 0)
+	{
+		printf("equal");
+	}
+	else 
+	{
+		printf("not equal");
+	}
+}
+void ccpy()
+{
+	char s1[] = "PETERNTSUNTSHA";
+	char s2[] = "WETHINKCODEFOR";
+	char a = 'I';
+	char *res;
+	res = ft_memccpy(s1, s2, a, 14);
+	printf("%s", res);
+}
+void cat()
+{
+	char s1[] = "PETER";
+	char s2[] = " NTSUNTSHA";
+	char *res;
+	res = ft_strncat(s1, s2, 5);
+	printf("%s", res);
+}
+void lcat()
+{
+	char st1[] = "PETER";
+	char st2[] = "NTSUNTSHA";
+	printf("%zu", ft_strlcat(st1, st2, 6));
+}
 int main()
 {/*
 	nbr();
@@ -137,7 +173,11 @@ int main()
 	stmap();
 	join();
 	trim();
-	equal()*/
+	equal()
 	new();
+	cmp();
+	ccpy();
+	cat();*/
+	lcat();
 	return (0);
 }
